@@ -1,10 +1,6 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import TransactionList
+from django.urls import path
+from .views import TransactionViewSet
 
-router = DefaultRouter()
 urlpatterns = [
-    path('', include(router.urls)),
-    path('transactions/', TransactionList.as_view(), name='transactions'),
-
+    path("transactions/", TransactionViewSet.as_view({'get': 'list'}), name="transactions"),
 ]

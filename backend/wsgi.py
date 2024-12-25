@@ -17,7 +17,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend.settings")
 
 
 # Add the project directory to the sys.path
-project_home = '/home/nasipa/django_project/'
+project_home = '/home/nasipa/django_project'
 if project_home not in sys.path:
     sys.path.append(project_home)
 

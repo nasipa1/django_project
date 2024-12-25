@@ -39,7 +39,8 @@ SECRET_KEY = "django-insecure-jo7q@@d(+)q&8ek=+v-hl$0k#le@xy@4lw2yvtx9l2&a=@6gw4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True  # Change to False when deploying to production.
 
-ALLOWED_HOSTS = ['nasipa.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['nasipa.pythonanywhere.com']
+
 
 
 # Application definition
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
     "api",  # Ensure this is the correct app name for your Django app.
 ]
 
