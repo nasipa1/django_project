@@ -1,6 +1,7 @@
-from rest_framework.viewsets import ViewSet
-from rest_framework.response import Response
+from rest_framework import viewsets
+from .models import Transaction
+from .serializers import TransactionSerializer
 
-class TransactionViewSet(ViewSet):
-    def list(self, request):
-        return Response({"message": "Hello, Transactions!"})
+class TransactionViewSet(viewsets.ModelViewSet):
+    queryset = Transaction.objects.all()
+    serializer_class = TransactionSerializer
