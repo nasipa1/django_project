@@ -19,13 +19,17 @@ from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
 
+# A simple home view to ensure the root URL works
 def home_view(request):
     return HttpResponse("<h1>Welcome to Your Django Backend</h1>")
 
-
 urlpatterns = [
+    # Admin site URL
     path("admin/", admin.site.urls),
-    path('api/', include('api.urls')),
-    path('', home_view, name='home'),
 
+    # API endpoints
+    path('api/', include('api.urls')),  # Replace 'backend_api' with your actual app name
+
+    # Home route
+    path('', home_view, name='home'),
 ]
